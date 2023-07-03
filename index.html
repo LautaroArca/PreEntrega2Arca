@@ -2,10 +2,8 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/styles.css" />
-
     <title>Calculadora Básica</title>
   </head>
-
   <body>
     <div id="particles-js"></div>
     <div class="container">
@@ -13,6 +11,18 @@
       <div>
         <input type="text" id="display" readonly />
       </div>
+      <div id="output"></div>
+      <!-- Elemento para mostrar las salidas -->
+      <div class="row">
+        <div class="button-wrapper">
+          <button onclick="retroceder()">&lt;</button>
+        </div>
+
+        <div class="button-wrapper">
+          <button onclick="avanzar()">&gt;</button>
+        </div>
+      </div>
+
       <div class="row">
         <div class="button-wrapper">
           <button onclick="agregarNumero(7)">7</button>
@@ -60,7 +70,7 @@
           <button onclick="agregarNumero(0)">0</button>
         </div>
         <div class="button-wrapper">
-          <button onclick="borrar()">C</button>
+          <button id="clearButton">C</button>
         </div>
         <div class="button-wrapper">
           <button onclick="calcular()">=</button>
@@ -68,10 +78,11 @@
         <div class="button-wrapper">
           <button onclick="operar('/')">/</button>
         </div>
+        <button class="switch-button" onclick="cambiarModo()"></button>
       </div>
     </div>
 
-    <script src="Js/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="Js/script.js"></script>
     <script src="Js/app.js"></script>
   </body>
